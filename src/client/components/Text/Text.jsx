@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import "./index.scss";
 
 const Text = props => {
-  const { size, className, children, weight } = props;
-  console.log("children ", children);
+  const { size, className, weight, children } = props;
   console.log(props,'props');
   return (
     <div>
@@ -15,7 +14,7 @@ const Text = props => {
 
 Text.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.string.isDefined,
+  children: PropTypes.string,
   size: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8]),
   weight: PropTypes.oneOf(["light", "regular", "bold", "semiBold"]),
 };

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TextExample from '../components/Text/index';
+import TextExample from '../components/Text/example';
 
 class App extends React.Component {
   render() {
