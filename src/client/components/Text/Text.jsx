@@ -5,6 +5,7 @@ import "./index.scss";
 const Text = props => {
   const { size, className, children, weight } = props;
   console.log("children ", children);
+  console.log(props,'props');
   return (
     <div>
       <p className={className}>{children}</p>
@@ -14,9 +15,9 @@ const Text = props => {
 
 Text.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.string.isDefined,
   size: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8]),
-  weight: PropTypes.oneOf(["light", "regular", "bold", "semiBold"])
+  weight: PropTypes.oneOf(["light", "regular", "bold", "semiBold"]),
 };
 
 Text.defaultProps = {
