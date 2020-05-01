@@ -1,3 +1,47 @@
-.shrey {
-  font-size: 1.2rem;
+@import '../../variables.scss';
+
+$colors : (
+blue:$blue,
+blueLight:$blueLight,
+blueGrey:$blueGrey,
+blueGreyLight:$blueGreyLight,
+greyDark:$greyDark,
+grey:$grey,
+greyLight:$greyLight,
+white:$white,
+black:$black,
+red:$red,
+yellow:$yellow,
+green:$green
+);
+
+$weight:(
+	light: $light,
+	regular: $regular,
+	semibold: $semiBold,
+	bold: $bold,
+);
+
+$sizes :(
+	font0: $font0,
+	font1: $font1,
+	font2: $font2,
+	font3: $font3,
+	font4: $font4,
+	font5: $font5,
+	font6: $font6,
+	font7: $font7,
+);
+
+.fontcolor {
+  @include fontColor;
+}
+
+
+.fontweight {
+  @include fontWeight;
+	}
+	
+.fontsize {
+	@include fontSize;
 }

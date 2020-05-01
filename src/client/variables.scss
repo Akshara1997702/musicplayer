@@ -1,0 +1,68 @@
+//font-family 
+$fontFamily: 'Open Sans', sans-serif;
+
+//font-sizes
+$font0: 0.6rem;
+$font1: 1rem;
+$font2: 1.2rem;
+$font3: 1.4rem;
+$font4: 1.6rem;
+$font5: 2rem;
+$font6: 2.2rem;
+$font7: 2.4rem;
+
+//font-weight
+$light: 300;
+$regular: 400;
+$semiBold: 600;
+$bold: 800;
+
+//colors
+$blue: #002e6e;
+$blueLight: #00b9f5;
+$blueExtraLight: #f3fbfe;
+$blueGrey: #536d90;
+$blueGreyLight: #7b93b4;
+$greyDark: #e6ebf3;
+$grey: #f0f4f6;
+$greyLight: #f7f9fc;
+$white: #fff;
+$black: #29394f;
+$red: #ff4b55;
+$yellow: #ff9e00;
+$green: #00c673;
+
+// misc
+$radius: 0.2rem;
+
+// componentBaseSizes
+$smallSize: 3.2rem;
+$defaultSize: 4.8rem;
+$largeSize: 5.6rem;
+
+
+//mixins
+
+@mixin fontWeight {
+	@each $weight, $hex in $weight {
+		&-#{$weight} {
+			font-weight: $hex;
+		}
+	}
+}
+
+@mixin fontColor {
+  @each $color,$hex in $colors {
+      &-#{$color} {
+        color: $hex;
+      }
+  }
+} 
+
+@mixin fontSize {
+  @each $size,$hex in $sizes {
+    &-#{$size}{
+      font-size: $hex;
+    }
+  }
+}
